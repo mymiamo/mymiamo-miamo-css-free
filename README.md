@@ -1,5 +1,5 @@
 ---
-# New
+### New
 
 Mac-Style Code Preview: A Sleek and Minimalist Code Display
 Want to add a modern touch to your code previews? Mac-Style Code Preview helps you create a stylish and minimalist window for displaying code snippets. Inspired by macOS aesthetics, this component enhances readability and presentation.

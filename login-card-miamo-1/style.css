@@ -1,0 +1,175 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #13141f;
+}
+
+.login-card {
+    background-color: rgba(221, 221, 221, 0.85);
+    padding: 16px;
+    min-width: 450px;
+    max-width: 600px;
+    border-radius: 1rem;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.15);
+    
+}
+
+.login-card .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card .logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #8a8a8a;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-card .logo span {
+    font-size: 1.8rem;
+    font-weight: 400;
+    user-select: none;
+}
+
+.login-card .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-block: 16px;
+}
+
+.login-card .input-group label {
+    font-weight: 600;
+    color: #333;
+}
+
+.input-group input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    outline: none;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+.input-group input:focus {
+    border: 2px solid #007AFF;
+    background-color: #fff;
+}
+.input-group:has(input:focus) label {
+    transition: all 0.3s ease-in-out;
+    color: #005bb5;
+}
+/* iOS Switch (Remember Me) */
+.login-col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rm-checkbox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    gap: 10px;
+    user-select: none;
+}
+
+.rm-checkbox input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 44px;
+    height: 24px;
+    background: #a8a8a8;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.rm-checkbox input::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.rm-checkbox input:checked {
+    background: #007AFF;
+}
+
+.rm-checkbox input:checked::before {
+    transform: translateX(20px);
+}
+
+
+.login-col .forgot {
+    font-size: 12px;
+    font-weight: 700;
+    color: #007AFF;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-col .forgot:hover {
+    text-decoration: underline;
+    color: #005bb5;
+}
+.submit {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    background: #007AFF;
+    border: none;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 122, 255, 0.3);
+    user-select: none;
+}
+.submit:hover{
+    opacity: 0.5;
+}
+.submit:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 6px rgba(0, 122, 255, 0.5);
+    opacity: 1;
+}

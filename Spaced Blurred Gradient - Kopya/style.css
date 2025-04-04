@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #0d0d0d;
+    overflow: hidden;
+    position: relative;
+    font-family: sans-serif;
+  }
+
+  .blurred-gradient,
+  .blurred-gradient2,
+  .blurred-gradient3 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.6;
+    z-index: -1;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  .blurred-gradient {
+    background: radial-gradient(circle, #ff9a9e, transparent 70%);
+    animation: float1 18s infinite alternate;
+  }
+
+  .blurred-gradient2 {
+    background: radial-gradient(circle, #a18cd1, transparent 70%);
+    animation: float2 20s infinite alternate;
+  }
+
+  .blurred-gradient3 {
+    background: radial-gradient(circle, #84fab0, transparent 70%);
+    animation: float3 16s infinite alternate;
+    width: 600px;   /* Daha büyük */
+    height: 600px;  /* Daha büyük */
+  }
+
+  @keyframes float1 {
+    0%   { top: -150px; left: -150px; }
+    50%  { top: 100px; left: 30%; }
+    100% { top: -100px; left: 10%; }
+  }
+
+  @keyframes float2 {
+    0%   { top: -200px; right: -150px; }
+    50%  { top: 50px; right: 20%; }
+    100% { top: -80px; right: 10%; }
+  }
+
+  @keyframes float3 {
+    0%   { top: -100px; left: 40%; }    
+    50%  { top: 100px; left: 20%; }  
+    100% { top: -150px; left: 60%; }    
+  }
+
+  h1 {
+    color: white;
+    text-align: center;
+    margin-top: 40vh;
+    font-size: 2.5rem;
+    z-index: 1;
+    position: relative;
+  }
+
